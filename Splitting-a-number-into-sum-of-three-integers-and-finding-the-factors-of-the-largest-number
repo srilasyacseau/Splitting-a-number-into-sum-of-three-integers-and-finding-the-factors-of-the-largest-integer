@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main() 
+{
+    int a, b, c, d, e;
+    
+    printf("\tEnter a number: ");
+    scanf("%d", &a);
+    printf("\n");
+    
+    b = a / 3;   // divide the number by 3 to get the first number
+    c = a / 3;   // divide the number by 3 to get the second number
+    d = a - b - c;   // subtract the first two numbers from the original number to get the third number
+    
+    printf("\t%d = %d + %d + %d.\n", a, b, c, d);
+    printf("\n");
+    
+    if (b > c && b > d) 
+    {
+        e = b;
+    } 
+    else if (c > d) 
+    {
+        e = c;
+    } 
+    else 
+    {
+        e = d;
+    }
+    
+    
+    printf("\tThe largest number is %d.\n",e);
+    
+    if(e > 0)
+    {
+       printf("\n\tThe factors of %d are: ",e);
+       
+        for (int i = 1; i <= e; i++) 
+        {
+           if (e % i == 0) 
+           {
+               printf("\n\t%d", i);
+           }
+        
+        }
+    
+    }
+    
+    
+    else
+    {
+        printf("\n\t%d is a negative number...",e);
+    }
+    
+    return 0;
+}
